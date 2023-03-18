@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import Header from '../components/header/Header';
 import PropTypes from 'prop-types';
-
 import './DefaultLayout.scss';
 
 interface Props {

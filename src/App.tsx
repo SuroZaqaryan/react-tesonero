@@ -1,11 +1,11 @@
-import React from 'react';
-import DefaultLayout from './layouts/DefaultLayout';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './views/home/Home';
 
 function App() {
   return (
-    <DefaultLayout>
-      <h1>App</h1>
-    </DefaultLayout>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
   );
 }
 

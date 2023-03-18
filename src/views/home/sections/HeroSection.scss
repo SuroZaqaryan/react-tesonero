@@ -1,0 +1,212 @@
+@import '../../../assets/utils/responsive_mixins';
+
+.hero {
+  position: relative;
+  background-image: url('../../../assets/images/home-images/hero-background.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 160px);
+  max-height: 1920px;
+
+  @include md {
+    background-image: none;
+  }
+
+  .hero_patterns {
+    .hero__pattern-1 {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .hero__pattern-2 {
+      position: absolute;
+      right: 0;
+    }
+
+    @include md {
+      display: none;
+    }
+  }
+
+  .hero__container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+
+    .hero-mobile__main-image {
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 218px;
+        margin: auto;
+      }
+    }
+
+    .hero__mobile-slider {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      background: #a6abbd;
+    }
+
+    @include md {
+      top: 0;
+      transform: translateY(0);
+      .hero__mobile-slider {
+        display: block;
+        margin-top: 50px;
+        width: 300px;
+        .swiper-wrapper {
+          .hero__mobile-slider-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            max-width: 180px;
+            margin: auto;
+            margin-bottom: 63px;
+            img {
+              width: 65px;
+              height: 65px;
+            }
+          }
+        }
+
+        .swiper-button-next {
+          background-image: url('../../../assets/icons/slider-arrow-right.svg');
+        }
+
+        .swiper-button-prev {
+          background-image: url('../../../assets/icons/slider-arrow-left.svg');
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .hero__title {
+      hr {
+        max-width: 184px;
+        height: 4px;
+        margin-bottom: 22px;
+        border: none;
+        background-color: #00c368;
+      }
+      h1 {
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 700;
+        color: #2e3a59;
+
+        @include lg {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .hero__content {
+      position: relative;
+      max-width: 500px;
+      height: 500px;
+      margin: 120px auto;
+
+      @include lg {
+        max-width: 450px;
+      }
+
+      @include md {
+        display: none;
+      }
+
+      .hero__content-group {
+        position: absolute;
+        max-width: 180px;
+        text-align: center;
+
+        p {
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+          color: #2e3a59;
+        }
+
+        @include lg {
+          img {
+            width: 50px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .service,
+      .contact,
+      .network {
+        left: 0;
+      }
+
+      .chat,
+      .game,
+      .info {
+        right: 0;
+      }
+
+      .contact {
+        top: 50%;
+        transform: translate(-80%, -50%);
+      }
+
+      .game {
+        top: 50%;
+        transform: translate(80%, -50%);
+      }
+
+      .service,
+      .chat {
+        top: -4rem;
+      }
+
+      .info,
+      .network {
+        bottom: -4rem;
+      }
+
+      &-main-image {
+        width: fit-content;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+          max-width: 436px;
+
+          @include lg {
+            max-width: 380px;
+          }
+
+          @include md {
+            max-width: 218px;
+          }
+        }
+      }
+    }
+  }
+}
