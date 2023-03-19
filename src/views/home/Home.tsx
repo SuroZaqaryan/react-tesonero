@@ -1,10 +1,14 @@
-import DefaultLayout from '../../layouts/DefaultLayout';
-import HeroSection from './sections/HeroSection'
+import DefaultLayout from 'layouts/DefaultLayout';
+import HeroSection from './sections/hero-section/HeroSection'
+import MainSection from "./sections/main-section/MainSection";
 
 function Home() {
   return (
     <DefaultLayout>
-      <HeroSection />
+      <main>
+          <HeroSection />
+          <MainSection />
+      </main>
     </DefaultLayout>
   );
 }

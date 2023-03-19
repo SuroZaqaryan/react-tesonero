@@ -1,6 +1,7 @@
 $sm: 576px;
 $md: 768px;
 $lg: 1024px;
+$x: 1200px;
 $xl: 1366px;
 $xxl: 1920px;
 
@@ -26,6 +27,20 @@ $xxl: 1920px;
 }
 
 // Extra large
+@mixin x {
+  @media (max-width: $x) {
+    @content;
+  }
+}
+
+// Extra large
+@mixin xl {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+
+// Extra large
 @mixin desktop-large {
   @media (max-width: $xl) {
     @content;
@@ -35,6 +50,13 @@ $xxl: 1920px;
 // Extra extra large
 @mixin xxl {
   @media (max-width: $xxl) {
+    @content;
+  }
+}
+
+// Medium min
+@mixin md-min {
+  @media (min-width: $md) {
     @content;
   }
 }

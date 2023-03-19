@@ -1,4 +1,4 @@
-@import '../../assets/utils/responsive_mixins';
+@import 'assets/utils/responsive_mixins';
 
 header {
   padding: 0 87px;
@@ -71,6 +71,7 @@ header {
               color: #a6abbd;
               padding: 4px 24px;
               text-decoration: none;
+              transition: 0.3s;
 
               &:hover {
                 background: #00c368;
