@@ -9,42 +9,44 @@
   background-attachment: fixed;
   height: calc(100vh - 160px);
   max-height: 1920px;
+  min-height: 1000px;
 
   @include md {
     background-image: none;
+    min-height: auto;
     height: auto;
   }
 
-    .hero__pattern-1 {
-      position: absolute;
-      background-image: url('../../../../assets/images/home-images/hero-section-images/pattern-1.png ');
-      background-repeat: no-repeat;
-      background-size: auto 50%;
-      background-attachment: fixed;
-      top: 0;
-      width: 500px;
-      height: 100%;
-      background-position: left bottom;
-    }
+  .hero__pattern-1 {
+    position: absolute;
+    background-image: url('../../../../assets/images/home-images/hero-section-images/pattern-1.png ');
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+    background-attachment: fixed;
+    top: 0;
+    width: 500px;
+    height: 100%;
+    background-position: left bottom;
+  }
 
+  .hero__pattern-2 {
+    position: absolute;
+    background-image: url('../../../../assets/images/home-images/hero-section-images/pattern-2.png ');
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+    background-attachment: fixed;
+    right: 0;
+    width: 650px;
+    height: 100%;
+    background-position: 85% 20%;
+  }
+
+  @include md {
+    .hero__pattern-1,
     .hero__pattern-2 {
-      position: absolute;
-      background-image: url('../../../../assets/images/home-images/hero-section-images/pattern-2.png ');
-      background-repeat: no-repeat;
-      background-size: auto 50%;
-      background-attachment: fixed;
-      right: 0;
-      width: 650px;
-      height: 100%;
-      background-position: 85% 20%;
+      display: none;
     }
-
-    @include md {
-      .hero__pattern-1,
-      .hero__pattern-2 {
-        display: none;
-      }
-    }
+  }
 
   .hero__container {
     position: absolute;
@@ -90,7 +92,7 @@
               circle,
               rect,
               path {
-                stroke: #00C368;
+                stroke: #00c368;
               }
             }
           }
@@ -197,7 +199,7 @@
               circle,
               rect,
               path {
-                stroke: #00C368;
+                stroke: #00c368;
               }
             }
           }
